@@ -1,5 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "ResourcesManager.hpp"
+#include "EntityManager.hpp"
+#include "EntityMemoryPool.hpp"
+
 class Game
 {
 
@@ -9,7 +13,13 @@ class Game
 		~Game();
 
 	private:
+		ResourcesManager _ResourcesManager;
+		EntityMemoryPool _EntityMemoryPool;
+		EntityManager	 _EntityManager;
 		sf::RenderWindow* _window;
+
+
+
 		bool gameOver;
 		
 		void initialize();
