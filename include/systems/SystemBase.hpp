@@ -1,8 +1,10 @@
 #pragma once
 #include <vector>
+//#include <SFML/Graphics.hpp>
 #include "../Entity.hpp"
 
 
+namespace sf { class Time; }
 class Entity;
 
 class SystemBase
@@ -12,5 +14,5 @@ class SystemBase
 
 	public:
 		SystemBase(std::vector<Entity>& entities);
-	virtual void update(float dt) = 0;
+	virtual void update(const sf::Time deltaTime) = 0;
 };

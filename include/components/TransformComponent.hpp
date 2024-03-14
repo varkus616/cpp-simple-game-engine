@@ -1,10 +1,9 @@
 #pragma once
 #include "ComponentBase.hpp"
+#include <SFML/Graphics.hpp>
 
 struct TransformComponent : ComponentBase
 {
-	float xvelocity;
-	float yvelocity;
-	float xpos;
-	float ypos;
+	sf::Vector2f velocity;
+	sf::Vector2f position;
 };

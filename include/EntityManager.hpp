@@ -1,8 +1,10 @@
 #pragma once
+
 #include "Entity.hpp"
 #include "components/TransformComponent.hpp"
-#include "components/SpriteComponent.hpp"
+#include "components/AnimationComponent.hpp"
 #include "systems/TransformSystem.hpp"
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <tuple>
@@ -10,13 +12,15 @@
 
 
 typedef std::tuple<std::vector<TransformComponent>,
-				   std::vector<SpriteComponent>> EntityComponentVectorTuple;
+				   std::vector<AnimationComponent>> EntityComponentVectorTuple;
+
 class EntityMemoryPool;
 
 class EntityManager
 {
 	private:
 		std::vector<Entity> _entities;
+		
 		TransformSystem _TransformSystem;
 
 	public:
@@ -24,9 +28,9 @@ class EntityManager
 
 		Entity addEntity(const std::string& tag);
 		void removeEntity(Entity e);
-		void update(float dt);
-		void handleEvents(sf::Event event);
-		void render(sf::RenderWindow* window);
+		void update(const sf::Time deltaTime);
+		//void handleEvents(const sf::Event event);
+		void render(sf::RenderWindow& window);
 
 		std::vector<Entity>& getEntities();
 

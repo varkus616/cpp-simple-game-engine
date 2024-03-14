@@ -5,7 +5,7 @@
 ResourcesManager* ResourcesManager::_instance = nullptr;
 
 ResourcesManager::ResourcesManager(){}
-ResourcesManager::~ResourcesManager(){}
+ResourcesManager::~ResourcesManager() {}
 
 void ResourcesManager::startUp()
 {
@@ -14,7 +14,7 @@ void ResourcesManager::startUp()
 }
 void ResourcesManager::shutDown()
 {
-	//TO DO
+	//delete _instance;
 }
 
 sf::Texture& ResourcesManager::GetTexture(std::string const& name)

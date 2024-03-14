@@ -7,5 +7,5 @@ class TransformSystem : SystemBase
 {
 	public:
 		TransformSystem(std::vector<Entity>& entities);
-	void update(float dt) override;
+	void update(const sf::Time deltaTime) override;
 };

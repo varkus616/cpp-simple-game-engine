@@ -3,14 +3,13 @@
 
 TransformSystem::TransformSystem(std::vector<Entity>& entities):SystemBase(entities){}
 
-void TransformSystem::update(float dt)
+void TransformSystem::update(const sf::Time deltaTime)
 {
 
 	for (auto& entity:_entities)
 		if (entity.hasComponent<TransformComponent>())
 		{
 			TransformComponent& eComp = entity.getComponent<TransformComponent>();
-			eComp.xpos += eComp.xvelocity;
-			eComp.ypos += eComp.yvelocity;
+			eComp.position += eComp.velocity;
 		}
 }

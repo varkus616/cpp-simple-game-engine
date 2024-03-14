@@ -19,31 +19,43 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Command.cpp" />
     <ClCompile Include="src\Entity.cpp" />
     <ClCompile Include="src\EntityManager.cpp" />
     <ClCompile Include="src\EntityMemoryPool.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\GameState.cpp" />
+    <ClCompile Include="src\gui\Button.cpp" />
+    <ClCompile Include="src\MenuState.cpp" />
     <ClCompile Include="src\State.cpp" />
     <ClCompile Include="src\StateStack.cpp" />
     <ClCompile Include="src\ResourcesManager.cpp" />
     <ClCompile Include="src\Source.cpp" />
     <ClCompile Include="src\systems\SystemBase.cpp" />
     <ClCompile Include="src\systems\TransformSystem.cpp" />
+    <ClCompile Include="src\TileCreator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Animation.hpp" />
+    <ClInclude Include="include\Command.hpp" />
+    <ClInclude Include="include\components\AnimationComponent.hpp" />
     <ClInclude Include="include\components\ComponentBase.hpp" />
-    <ClInclude Include="include\components\SpriteComponent.hpp" />
     <ClInclude Include="include\components\TransformComponent.hpp" />
     <ClInclude Include="include\Entity.hpp" />
     <ClInclude Include="include\EntityManager.hpp" />
     <ClInclude Include="include\EntityMemoryPool.hpp" />
     <ClInclude Include="include\Game.hpp" />
+    <ClInclude Include="include\GameState.hpp" />
+    <ClInclude Include="include\gui\Button.hpp" />
+    <ClInclude Include="include\MenuState.hpp" />
     <ClInclude Include="include\State.hpp" />
     <ClInclude Include="include\StateIdentifiers.hpp" />
     <ClInclude Include="include\StateStack.hpp" />
     <ClInclude Include="include\ResourcesManager.hpp" />
     <ClInclude Include="include\systems\SystemBase.hpp" />
     <ClInclude Include="include\systems\TransformSystem.hpp" />
+    <ClInclude Include="include\TileCreator.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -5,7 +5,6 @@
 #include<iostream>
 #include<algorithm>
 #include<iostream>
-#include "components/TransformComponent.hpp"
 #include "EntityManager.hpp"
 
 class EntityMemoryPool
@@ -34,7 +33,7 @@ class EntityMemoryPool
 			auto& pool = _instance->_pool;
 
 			EntityMemoryPool::getComponent<TransformComponent>(index).active = false;
-			EntityMemoryPool::getComponent<SpriteComponent>(index).active = false;
+			EntityMemoryPool::getComponent<AnimationComponent>(index).active = false;
 
 			_instance->_tags[index] = tag;
 			_instance->_active[index] = true;
@@ -49,7 +48,7 @@ class EntityMemoryPool
 			auto& pool = _instance->_pool;
 
 			EntityMemoryPool::getComponent<TransformComponent>(id).active = false;
-			EntityMemoryPool::getComponent<SpriteComponent>(id).active = false;
+			EntityMemoryPool::getComponent<AnimationComponent>(id).active = false;
 
 			_instance->_tags[id] = "";
 			_instance->_active[id] = false;
