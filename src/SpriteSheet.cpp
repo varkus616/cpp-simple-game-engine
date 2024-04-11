@@ -22,3 +22,6 @@ sf::IntRect SpriteSheet::getSpriteRect(size_t index) {
     }
     return spriteRect;
 }
+
+int SpriteSheet::getFrameWidth()const { return _frameWidth; }
+int SpriteSheet::getFrameHeight()const { return _frameHeight; }

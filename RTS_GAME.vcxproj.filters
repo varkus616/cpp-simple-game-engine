@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Systems">
+      <UniqueIdentifier>{915ffd1e-d46b-4ec9-a75f-a26b9ea2f3fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Components">
+      <UniqueIdentifier>{a64d35f0-8412-4266-86ee-50ae7b344d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\systems">
+      <UniqueIdentifier>{c35af937-4375-40d3-91b7-a6ab5b758d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\GUI">
+      <UniqueIdentifier>{bae462d8-90d1-48f5-aac2-48151414472b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Entity.cpp">
@@ -31,12 +43,6 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="src\Source.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="src\systems\TransformSystem.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="src\systems\SystemBase.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="src\StateStack.cpp">
@@ -60,7 +66,31 @@
     <ClCompile Include="src\Animation.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="src\TileCreator.cpp">
+    <ClCompile Include="src\SpriteSheet.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\AnimationSystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\CollisionSystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\InputSystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\SystemBase.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\TransformSystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\UnitsSystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\AISystem.cpp">
+      <Filter>Pliki źródłowe\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AI.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,18 +108,6 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="include\ResourcesManager.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="include\components\TransformComponent.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="include\systems\TransformSystem.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="include\components\ComponentBase.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="include\systems\SystemBase.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="include\StateStack.hpp">
@@ -110,16 +128,64 @@
     <ClInclude Include="include\Command.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="include\gui\Button.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="include\components\AnimationComponent.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="include\Animation.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="include\TileCreator.hpp">
+    <ClInclude Include="include\SpriteSheet.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\TransformSystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\AnimationSystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\HandleInputComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\InputSystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\AnimationComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\CollisionComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\ComponentBase.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\SelectableComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\SystemBase.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\TransformComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\CollisionSystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\ResourceComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\UnitComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\UnitsSystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gui\Button.hpp">
+      <Filter>Pliki nagłówkowe\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\components\AIComponent.hpp">
+      <Filter>Pliki nagłówkowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systems\AISystem.hpp">
+      <Filter>Pliki nagłówkowe\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AI.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

@@ -27,11 +27,26 @@ void StateStack::handleEvent(const sf::Event& event)
     {
         if (event.type == sf::Event::KeyPressed || event.type == sf::Event::KeyReleased)
         {
-            if ((*itr)->getCommandMap().find(event.key.code) == (*itr)->getCommandMap().end()) continue;
+            if ((*itr)->getKeyboardCommandMap().find(event.key.code) == (*itr)->getKeyboardCommandMap().end()) continue;
             const std::string actionType = (event.type == sf::Event::KeyPressed) ? "START" : "END";
             
-            (*itr)->sendCommand(Command((*itr)->getCommandMap().at(event.key.code), actionType));
+            (*itr)->sendCommand(Command((*itr)->getKeyboardCommandMap().at(event.key.code), actionType));
         }
+        else if (event.type == sf::Event::MouseButtonPressed || event.type == sf::Event::MouseButtonReleased)
+        {
+            if ((*itr)->getMouseCommandMap().find(event.key.code) == (*itr)->getMouseCommandMap().end()) continue;
+            const std::string actionType = (event.type == sf::Event::MouseButtonPressed) ? "START" : "END";
+
+            (*itr)->sendCommand(Command((*itr)->getMouseCommandMap().at(event.key.code), actionType));
+        }
+        else if (event.type == sf::Event::MouseMoved)
+        {
+            if ((*itr)->getMouseCommandMap().find(sf::Event::MouseMoved) == (*itr)->getMouseCommandMap().end()) continue;
+            const std::string actionType = "CONTINUSE";
+
+            (*itr)->sendCommand(Command((*itr)->getMouseCommandMap().at(sf::Event::MouseMoved), actionType));
+        }
+        
     }
     applyPendingChanges();
 }

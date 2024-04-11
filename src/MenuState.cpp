@@ -15,8 +15,8 @@ MenuState::MenuState(StateStack& stack, Context context) :
         };
 
 
-    _StartButton.setPosition(_window.getSize().x / 2 - 20,
-                             _window.getSize().y / 2 + 40);
+    _StartButton.setPosition((float)_window.getSize().x / 2 - 20,
+                             (float)_window.getSize().y / 2 + 40);
 
     _StartButton.setColor(sf::Color::Red);
 
@@ -46,9 +46,9 @@ MenuState::MenuState(StateStack& stack, Context context) :
 
     _ExitButton.setColor(sf::Color::Blue);
 
-    registerCommand(sf::Keyboard::S, "START");
-    registerCommand(sf::Keyboard::O, "OPTIONS");
-    registerCommand(sf::Keyboard::E, "EXIT");
+    //registerCommand(sf::Keyboard::S, "START");
+    //registerCommand(sf::Keyboard::O, "OPTIONS");
+    //registerCommand(sf::Keyboard::E, "EXIT");
 
 }
 

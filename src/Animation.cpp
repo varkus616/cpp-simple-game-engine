@@ -11,6 +11,18 @@ Animation::Animation():
    
 }
 
+Animation::Animation(const Animation& other) :
+    _name(other.getName()),
+    _sprite(),
+    _frameCount(1),
+    _speed(0),
+    _currentFrame(0),
+    _repeate(false)
+{
+
+}
+
+
 Animation::Animation(const std::string& name, const sf::Texture& texture) :
     Animation(name, texture, 1, 0)
 {}
@@ -24,6 +36,11 @@ Animation::Animation(const std::string& name, const sf::Texture& texture,
     _currentFrame(0),
     _repeate(false)
 {
+}
+
+void Animation::draw(sf::RenderTarget& target, sf::RenderStates states) const 
+{
+    target.draw(_sprite, states);
 }
 void Animation::update() {
     return;

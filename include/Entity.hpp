@@ -1,4 +1,5 @@
 #pragma once
+#include<string>
 class EntityMemoryPool;
 
 class Entity
@@ -15,6 +16,8 @@ class Entity
 		}
 
 		const size_t getId() const{ return _id; }
+
+		const std::string& getTag() const;
 
 		template<typename T>
 		T& getComponent()const{return EntityMemoryPool::getComponent<T>(_id);}

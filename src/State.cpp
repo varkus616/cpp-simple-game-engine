@@ -28,10 +28,16 @@ void State::requestStateClear()
     _stack.clearStates();
 }
 
-void State::registerCommand(sf::Keyboard::Key key, const std::string& name)
+void State::registerKeyboardCommand(int key, const std::string& name)
 {
-    if (_CommandMap.find(key) != _CommandMap.end())return;
-    _CommandMap.insert(std::make_pair(key, name));
+    if (_KeyboardCommandMap.find(key) != _KeyboardCommandMap.end())return;
+    _KeyboardCommandMap.insert(std::make_pair(key, name));
+}
+
+void State::registerMouseCommand(int key, const std::string& name)
+{
+    if (_MouseCommandMap.find(key) != _MouseCommandMap.end())return;
+    _MouseCommandMap.insert(std::make_pair(key, name));
 }
 
 void State::sendCommand(const Command command)
@@ -39,10 +45,17 @@ void State::sendCommand(const Command command)
     _CommandQueue.push(command);
 }
 
-const std::unordered_map<int, std::string>& State::getCommandMap()const
+const std::unordered_map<int, std::string>& State::getKeyboardCommandMap()const
 {
-    return _CommandMap;
+    return _KeyboardCommandMap;
 }
+
+
+const std::unordered_map<int, std::string>& State::getMouseCommandMap()const
+{
+    return _MouseCommandMap;
+}
+
 
 State::Context State::getContext()const
 {

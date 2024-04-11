@@ -5,4 +5,4 @@
 //	SIZE
 //};
 
-struct ComponentBase { bool active; };
+struct ComponentBase { bool active; virtual void clear() { active = false; } };

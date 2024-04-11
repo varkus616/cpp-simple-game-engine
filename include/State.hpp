@@ -32,13 +32,15 @@ public:
 
     void sendCommand(const Command command);
 
-    const std::unordered_map<int, std::string>& getCommandMap()const;
+    const std::unordered_map<int, std::string>& getKeyboardCommandMap()const;
+    const std::unordered_map<int, std::string>& getMouseCommandMap()const;
 
 protected:
     void        requestStackPush(States::ID stateID);
     void        requestStackPop();
     void        requestStateClear();
-    void registerCommand(sf::Keyboard::Key key, const std::string& name);
+    void registerKeyboardCommand(int key, const std::string& name);
+    void registerMouseCommand(int key, const std::string& name);
     virtual void executeCommands() = 0;
 
     Context     getContext() const;
@@ -49,7 +51,8 @@ protected:
 private:
     StateStack&  _stack;
     Context      _context;
-    std::unordered_map<int, std::string>   _CommandMap;
+    std::unordered_map<int, std::string>   _KeyboardCommandMap;
+    std::unordered_map<int, std::string>   _MouseCommandMap;
     
 
 };

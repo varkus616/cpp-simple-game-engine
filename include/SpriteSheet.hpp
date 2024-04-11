@@ -6,6 +6,8 @@ public:
     SpriteSheet(sf::Texture& texture, int spriteWidth, int spriteHeight);
 
     sf::IntRect getSpriteRect(size_t index);
+    int getFrameWidth()const;
+    int getFrameHeight()const;
 
 private:
     sf::Texture&             _texture;

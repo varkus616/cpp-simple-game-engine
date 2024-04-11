@@ -8,4 +8,5 @@ class TransformSystem : SystemBase
 	public:
 		TransformSystem(std::vector<Entity>& entities);
 	void update(const sf::Time deltaTime) override;
+	void setDestinationForSelectedUnits(const sf::Vector2f& destination);
 };

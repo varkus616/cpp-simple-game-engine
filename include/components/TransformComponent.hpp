@@ -4,6 +4,13 @@
 
 struct TransformComponent : ComponentBase
 {
-	sf::Vector2f velocity;
+	sf::Vector2f speed;
+	sf::Vector2f destination;
 	sf::Vector2f position;
+
+	void clear()
+	{
+		ComponentBase::clear();
+		destination = position = speed = sf::Vector2f();
+	}
 };

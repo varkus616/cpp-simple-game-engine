@@ -8,6 +8,7 @@
 #include "MenuState.hpp"
 #include "GameState.hpp"
 
+
 class Game
 {
 
@@ -19,6 +20,14 @@ class Game
 		sf::RenderWindow _window;
 		ResourcesManager _ResourcesManager;
 		StateStack		 _StateStack;
+
+
+		sf::Clock clock;
+		sf::Time timeSinceLastUpdate = sf::Time::Zero;
+
+		sf::Time timePerFrame = sf::seconds(1.f / 60.f);
+		sf::Time deltaTime = sf::Time::Zero;
+		sf::Text		fpsText;
 		
 		void initialize();
 		void handleEvents();
